@@ -2,18 +2,19 @@ import React from "react";
 import profile from '../Assests/ProfilePicture-2.png';
 import styled from "styled-components";
 import { useSpring, animated} from "react-spring";
-
+import { Container, Row, Col} from "react-bootstrap";
+import Typed from "react-typed";
 
 function GlassCard() {
-    const [props, set] = useSpring(() => ({ xys:[0, 0, 1], config: {mass: 10, tension: 200, friction: 50} }))
+    const [props, set] = useSpring(() => ({ xys:[0, 0, 1], config: {mass: 45, tension: 200, friction: 200} }))
 
     const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1]
     const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
-    const Container = styled(animated.div)`
-        display: inline-block;
+    const DivContainer = styled(animated.div)`
+      display: inline-block;
       padding: 3em;
-      background: #C7D2FE66;
+      background: #FFFF;
       border-radius: 10px;
       z-index: 1;
       position: relative;
@@ -34,7 +35,6 @@ function GlassCard() {
       line-heright: 1.5;
       letter-spacing: 1.5;
       font-family: "Gilroy";
-      
     `;
 
     const StyledH3 = styled.h3`
@@ -45,18 +45,38 @@ function GlassCard() {
     `;
 
 
+
     return (
-        <Container
+        <DivContainer
             onMouseMove={({clientX: x, clientY: y}) => (set({xys: calc(x, y)}))}
             onMouseLeave={() => set({xys: [0,0,1]})}
             style={{
                 transform: props.xys.interpolate(trans)
             }}
         >
-            <StyledImg src={profile}/>
-            <StyledH1>Arjun Bhalodia</StyledH1>
-            <StyledH3>Full Stack Engineeer <br/> and Backend Engineer</StyledH3>
-        </Container>
+            <Container>
+                <Row>
+                    <Col>
+                        <h1>Links Here</h1>
+                    </Col>
+                    <Col>
+                        <StyledImg src={profile}/>
+                        <StyledH1>Arjun Bhalodia</StyledH1>
+                        <StyledH3>
+                            <Typed
+                                strings={["Backend Engineer", "Full Stack Engineeer"]}
+                                typeSpeed={40}
+                                backSpeed={50}
+                                loop
+                            />
+                        </StyledH3>
+                    </Col>
+                    <Col>
+                        <h1>Second links here</h1>
+                    </Col>
+                </Row>
+            </Container>
+        </DivContainer>
     );
 }
 
