@@ -4,14 +4,47 @@ import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.min.css'
 import 'owl.carousel/dist/assets/owl.theme.default.min.css'
 import {Col, Container, Row} from "react-bootstrap";
+import styled from "styled-components";
 
 
 export default function Testimonials(){
+
+    const StyledH1 = styled.h1`
+      line-heright: 1.5;
+      letter-spacing: 1.5;
+      font-family: "Merriweather";
+      font-size: 50px;
+      @media only screen and (max-width: 820px){
+        font-size: 30px;
+      }
+    `;
+
+    const StyledParagraph = styled.p`
+        font-size: x-large;
+      padding-top: 2em;
+      @media only screen and (max-width: 820px){
+        font-size: medium;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    `;
+
+    const StyledH3 = styled.h3`
+      line-heright: 1.5;
+      letter-spacing: 1.15;
+      font-weight: lighter;
+      font-style: oblique;
+      font-size: 20px;
+      @media only screen and (max-width: 820px){
+        font-size: 20px;
+      }
+    `;
+
     const testimonial = [
         {
             content:
-                "Over all though it was a great experience and we have had lots of great feedback. We already started promoting our next event and I have been approached by 4 other companies who want to know more about it as they want to use it for their own events.",
-            author: "Sarah M., Director of Events"
+                "Arjun was a great teammate and a genuine joy to work with. He’s persistent, creative and always stays positive during tough problem solving. Can not recommend him enough and wish I got to work with him more.",
+            author: "Christopher Wood, Senior Software Engineer - Modea"
         },
         {
             content:
@@ -31,7 +64,8 @@ export default function Testimonials(){
     ];
 
     return (
-        <div>
+        <div className="testimonialSection">
+            <StyledH1>Testimonials</StyledH1>
             <OwlCarousel
                 className="owl-theme"
                 items="1"
@@ -40,13 +74,18 @@ export default function Testimonials(){
                 nav
                 dots
                 loop>
-                {testimonial.map((c, index) => {
+                {testimonial.map((c) => {
                     return (
                         <div className="item">
                             <Container>
+                                <Row>
+                                    <Col lg={{ span: 8, offset: 2}}>
+                                        <StyledParagraph>{c.content}</StyledParagraph>
+                                    </Col>
+                                </Row>
                                 <Row className="justify-content-center">
                                     <Col>
-                                        <p>{c.content}</p>
+                                        <StyledH3>{c.author}</StyledH3>
                                     </Col>
                                 </Row>
                             </Container>

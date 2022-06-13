@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import "./MyJourney.css"
 import {Container, Row, Col} from "react-bootstrap";
-import WorkBody from "./WorkBody";
-import Alkami from "../Assests/Alkami_Logo.png";
 import User from "../Assests/User.png";
 
 function MyJourney(){
