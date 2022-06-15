@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/PersonalWebsite/static/css/main.af7f5ff4.css",
+    "main.js": "/PersonalWebsite/static/js/main.9d90bf64.js",
+    "static/js/787.5809834d.chunk.js": "/PersonalWebsite/static/js/787.5809834d.chunk.js",
+    "static/media/Background_Image.jpg": "/PersonalWebsite/static/media/Background_Image.0b0468b68048858d8a7e.jpg",
+    "static/media/Alkami_Logo.png": "/PersonalWebsite/static/media/Alkami_Logo.3fc96317827063e5c216.png",
+    "static/media/FootLevelers_Logo.png": "/PersonalWebsite/static/media/FootLevelers_Logo.692cda8e817cc9da9406.png",
+    "static/media/User.png": "/PersonalWebsite/static/media/User.ab45eb1d42b1faaf3d12.png",
+    "index.html": "/PersonalWebsite/index.html",
+    "main.af7f5ff4.css.map": "/PersonalWebsite/static/css/main.af7f5ff4.css.map",
+    "main.9d90bf64.js.map": "/PersonalWebsite/static/js/main.9d90bf64.js.map",
+    "787.5809834d.chunk.js.map": "/PersonalWebsite/static/js/787.5809834d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af7f5ff4.css",
+    "static/js/main.9d90bf64.js"
+  ]
+}
