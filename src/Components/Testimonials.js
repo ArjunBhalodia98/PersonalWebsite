@@ -48,18 +48,8 @@ export default function Testimonials(){
         },
         {
             content:
-                "I cannot tell you how much we loved using this silent auction software. Everything was seamless…from set up, to bidding, to payment. We will absolutely use MyEvent next year.",
-            author: "Sarah M., CCHS Foundation"
-        },
-        {
-            content:
-                "I tried MyEvent instead of typical paper raffle tickets. The system was easy to set up online and people who couldn't attend the event were still able to enter the raffle, which was HUGE bump in revenue.",
-            author: "Alexander B., Pan-Mass Challenge"
-        },
-        {
-            content:
-                "MyEvent is a great way to bring in money for your Fund A Need. The 24/7 tech support allows you to feel confident, and the platform makes your Fund a Need so much easier to run. Well definitely be using MyEvent again.",
-            author: "Amy C., One Less Orphan Fund"
+                "I am impressed by the quality of work and professionalism I received from Arjun. He was right on time, energetic, and innovative in his commitments. Thanks to him, we could achieve our goals on time and finish numerous financial integrations and features. I'm looking forward to continuing working with him in the future.",
+            author: "Amir Anjomshoa, Team Tech Lead - Alkami Technologies"
         }
     ];
 

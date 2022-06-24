@@ -6,7 +6,6 @@ function WorkBody(props){
 
     const StyledImage = styled.img`
       width: 200px;
-      outline: 5px solid black;
       border-radius: 50%;
       @media only screen and (max-width: 820px){
         width: 180px;

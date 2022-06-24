@@ -3,14 +3,15 @@ import styled from "styled-components";
 import './TopPart.css'
 import Typed from 'react-typed';
 import Background_Image from "../Assests/Background_Image.jpg";
+import { Parallax, Background } from 'react-parallax';
+
+// import { Parallax, Background } from "react-parallax";
 
 function TopPart() {
 
     const StyledDiv = styled.div`
-      background-image: url(${Background_Image});
       background-size: cover;
       background-repeat: no-repeat;
-      opacity: 0.5;
       position: relative;
       height: 100vh;
       @media only screen and (max-width: 820px){
@@ -20,15 +21,20 @@ function TopPart() {
 
     const BodyDiv = styled.div`
       position: absolute;
-      top: 50%;
+      top: 60%;
       left: 50%;
       transform: translate(-50%, -50%);
+      @media only screen and (max-width: 820px){
+        top: 60%;
+        left: 50%;
+      }
     `;
 
     const StyledH1 = styled.h1`
       line-heright: 1.5;
       letter-spacing: 1.5;
       font-family: "Merriweather";
+      color: white;
       font-size: 50px;
       @media only screen and (max-width: 820px){
         font-size: 30px;
@@ -40,7 +46,7 @@ function TopPart() {
       letter-spacing: 1.5;
       font-family: "Merriweather";
       font-size: 20px;
-      color: crimson;
+      color: white;
       @media only screen and (max-width: 820px){
         font-size: 15px;
       }
@@ -51,6 +57,7 @@ function TopPart() {
       letter-spacing: 1.15;
       font-weight: bold;
       font-family: "Lato";
+      color: white;
       font-size: 30px;
       @media only screen and (max-width: 820px){
         font-size: 20px;
@@ -59,20 +66,24 @@ function TopPart() {
 
     return (
         <div className="TopPart">
-            <StyledDiv/>
-            <BodyDiv>
-                <StyledH3>Hey, I'm</StyledH3>
-                <StyledH1>Arjun Bhalodia</StyledH1>
-                <StyledH2>
-                    I am a&nbsp;
-                    <Typed
-                        strings={["Backend Engineer", "Full Stack Developer"]}
-                        typeSpeed={40}
-                        backSpeed={50}
-                        loop
-                    />
-                </StyledH2>
-            </BodyDiv>
+            <Parallax bgImage={Background_Image} strength={400} className="Parallax">
+                <StyledDiv>
+                    <BodyDiv>
+                        <StyledH3>Hey, I'm</StyledH3>
+                        <StyledH1>Arjun Bhalodia</StyledH1>
+                        <StyledH2>
+                            I am a&nbsp;
+                                <Typed
+                                    strings={["Backend Engineer", "Full Stack Developer"]}
+                                    typeSpeed={40}
+                                    backSpeed={50}
+                                    loop
+                                    style={{color: "#f09707"}}
+                                />
+                        </StyledH2>
+                    </BodyDiv>
+                </StyledDiv>
+            </Parallax>
         </div>
     )
 }
